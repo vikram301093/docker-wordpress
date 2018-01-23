@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: wordpress-kubernetes
+  name: wordpress-kubernetes-app
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: wordpress-kubernetes
+        app: wordpress-kubernetes-app
     spec:
       containers:
-      - name: wordpress-kubernetes
+      - name: wordpress-kubernetes-app
         image: webapp:1
         # for local development against minikube registry
         #imagePullPolicy: Never        
